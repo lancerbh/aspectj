@@ -1,0 +1,16 @@
+<aspectj>
+    <!--
+    <weaver options="-verbose -showWeaveInfo">
+    -->
+    <weaver>
+        <!--
+        <include within="br.com.lancer..*"/>
+        <include within="java.util..*"/>
+        -->
+        <include within="br.com.lancer..*"/>
+        <include within="org.apache.commons.lang*..*"/>
+    </weaver>
+    <aspects>
+        <aspect name="br.com.lancer.tests.aspect.ExecutionAspect"/>
+    </aspects>
+</aspectj>
