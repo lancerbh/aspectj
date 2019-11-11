@@ -1,8 +1,11 @@
 <aspectj>
+    <!--
     <weaver options="-verbose -showWeaveInfo">
-        <include within="br.com.lancer.tests..*"/>
+    -->
+    <weaver>
+        <include within="br.com.lancer..*"/>
     </weaver>
-    <aspects config="-verbose -showWeaveInfo">
+    <aspects>
         <aspect name="br.com.lancer.tests.aspect.ExecutionAspect"/>
     </aspects>
 </aspectj>

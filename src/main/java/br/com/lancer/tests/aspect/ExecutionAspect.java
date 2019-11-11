@@ -7,7 +7,7 @@ import org.aspectj.lang.annotation.Aspect;
 @Aspect
 public class ExecutionAspect {
 
-    @Around("execution(* *(..)) && within(br.com.lancer.tests..*) && !within(ExecutionAspect) && !within(AspectConfig) && !within(Application)")
+    @Around("execution(* *(..)) && within(br.com.lancer..*) && !within(*ExecutionAspect*) && !within(*AspectConfig*) && !within(*Application*)")
     public Object logDuration(ProceedingJoinPoint pjp) throws Throwable {
         System.out.println(getOperation(pjp));
         return pjp.proceed();
